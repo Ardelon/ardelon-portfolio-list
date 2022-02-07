@@ -1,0 +1,60 @@
+.portfolio-element-container {
+    width: $portfolio-element-width;
+    height: $portfolio-element-height;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.portfolio-element-background-image {
+    width: $portfolio-element-width;
+    height: $portfolio-element-height;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.portfolio-element-background-veil {
+    width: $portfolio-element-width;
+    height: $portfolio-element-height;
+    background-color: orange;
+    position: absolute;
+    z-index: 9999;
+    filter: contrast(0.7);
+    opacity: 0.5;
+}
+
+.portfolio-element-description-container {
+    width: $portfolio-element-width;
+    height: $portfolio-element-height;
+    background-color: gray;
+    position: absolute;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-name: "";
+    animation-fill-mode: forwards;
+    
+}
+
+.portfolio-element-description {
+   
+   
+}
+
+.portfolio-element-visit-demo-button {
+
+}
+
+.portfolio-element-hover-control-div {
+    width: $portfolio-element-width;
+    height: $portfolio-element-height;
+}
+
+@keyframes display {
+    from {opacity : 0}
+    to {opacity : 1}
+}
+
+@keyframes displayNot {
+    from {opacity : 1}
+    to {opacity : 0}
+}

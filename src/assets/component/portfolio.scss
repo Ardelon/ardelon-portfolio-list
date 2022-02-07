@@ -1,0 +1,19 @@
+.portfolio-container {
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 40px;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    // height: 700px;
+    border: 1px solid black;
+    overflow-x: auto;
+    
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
