@@ -8,7 +8,7 @@ export const configPortfolioElement = {
     portfolioElementBackgroundImageConfig : {classList : ["portfolio-element-background-image"], type: "img"},
     portfolioElementBackgroundVeilConfig : {classList : ["portfolio-element-background-veil"]},
     portfolioElementDescriptionContainerConfig : {classList : ["portfolio-element-description-container"]},
-    portfolioElementDescriptionConfig : {classList : ["portfolio-element-description"]},
-    portfolioElementVisitDemoButtonConfig : {classList : ["portfolio-element-visit-demo-button"]},
+    portfolioElementDescriptionConfig : {classList : ["portfolio-element-description"], type: "h1"},
+    portfolioElementVisitDemoButtonConfig : {classList : ["portfolio-element-visit-demo-button"], innerHTML : "Visit Site"},
     portfolioElementHoverControlDivConfig : {classList : ["portfolio-element-hover-control-div"]},
 }

@@ -39,18 +39,22 @@ const portfolioElement = (props) => {
     portfolioElementContainer.addEventListener('mouseover', (e) => {
         e.preventDefault();
         portfolioElementDescriptionContainer.style.animationName = "display";
+        portfolioElementBackgroundImage.style.animationName = "zoomIn";
         portfolioElementContainer.removeEventListener('mouseover', (e) => {
             e.preventDefault();
             portfolioElementDescriptionContainer.style.animationName = "display";
+            portfolioElementBackgroundImage.style.animationName = "zoomIn";
         });
     });
 
     portfolioElementContainer.addEventListener('mouseout', (e) => {
         e.preventDefault();
         portfolioElementDescriptionContainer.style.animationName = "displayNot";
+        portfolioElementBackgroundImage.style.animationName = "zoomOut";
         portfolioElementContainer.removeEventListener('mouseout', (e) => {
             e.preventDefault();
             portfolioElementDescriptionContainer.style.animationName = "displayNot";
+            portfolioElementBackgroundImage.style.animationName = "zoomOut";
         });
     });
 
@@ -63,7 +67,7 @@ const portfolioElement = (props) => {
     portfolioElementContainer.appendChild(portfolioElementBackgroundImage);
     portfolioElementContainer.appendChild(portfolioElementBackgroundVeil);
     portfolioElementContainer.appendChild(portfolioElementDescriptionContainer);
-    portfolioElementContainer.appendChild(portfolioElementHoverControlDiv);
+    // portfolioElementContainer.appendChild(portfolioElementHoverControlDiv);
 
 
     return portfolioElementContainer;

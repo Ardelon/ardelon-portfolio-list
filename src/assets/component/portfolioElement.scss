@@ -3,6 +3,7 @@
     height: $portfolio-element-height;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio-element-background-image {
@@ -10,6 +11,10 @@
     height: $portfolio-element-height;
     box-sizing: border-box;
     position: absolute;
+    animation-duration: $portfolio-element-animation-time;
+    animation-timing-function: ease-in;
+    animation-name: "";
+    animation-fill-mode: forwards;
 }
 
 .portfolio-element-background-veil {
@@ -17,7 +22,7 @@
     height: $portfolio-element-height;
     background-color: orange;
     position: absolute;
-    z-index: 9999;
+    // z-index: 9999;
     filter: contrast(0.7);
     opacity: 0.5;
 }
@@ -25,10 +30,10 @@
 .portfolio-element-description-container {
     width: $portfolio-element-width;
     height: $portfolio-element-height;
-    background-color: gray;
+    background-color: #313646;
     position: absolute;
     opacity: 0;
-    animation-duration: 1s;
+    animation-duration: $portfolio-element-animation-time;
     animation-timing-function: ease-out;
     animation-name: "";
     animation-fill-mode: forwards;
@@ -37,11 +42,38 @@
 
 .portfolio-element-description {
    
-   
+    font-family: "eurostile", sans-serif;
+    font-weight: 500;
+    color: #C9C7C5;
+    text-align: center;
+    line-height: 24px;
+    font-size: 28px;
+    padding: 10px;
 }
 
 .portfolio-element-visit-demo-button {
+    font-family: "eurostile", sans-serif;
+    font-weight: 500;
+    color: white;
+    height: 40px;
+    width: 160px;
+    border-radius: 20px;
+    position: absolute;
+    border: 1px solid rgb(93, 42, 157);
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 
+    &:hover {
+        background-color: rgb(129, 65, 212);
+    }
+    
 }
 
 .portfolio-element-hover-control-div {
@@ -57,4 +89,14 @@
 @keyframes displayNot {
     from {opacity : 1}
     to {opacity : 0}
+}
+
+@keyframes zoomIn {
+    from {transition: scale(1);}
+    to {  transform: scale(1.1);}
+}
+
+@keyframes zoomOut {
+    from {  transform: scale(1.1);}
+    to {transition: scale(1)}
 }
